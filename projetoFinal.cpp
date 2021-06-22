@@ -1,8 +1,5 @@
 /*
-MAIKY SILVERIO FREIRES 	Matricula:UC20104316 Curso: Ciencia da computação 
-Gustavo Henrique Dantas Matricula:UC20100755 Curso: Ciencia da computação  
-Eduardo Barbosa Pereira Matricula:UC21106180 Curso: Engenharia software
-Warlison da Silva Bezerra Matricula:UC21105867 curso:Engenharia software
+MAIKY SILVERIO FREIRES 	Matricula:UC20104316 Curso: Ciencia da computaÃ§Ã£o 
 */
  
 //bibliotecas utilizadas
@@ -17,10 +14,10 @@ Warlison da Silva Bezerra Matricula:UC21105867 curso:Engenharia software
 #define RESET "\x1b[0m"
 
 
- //inicialização do programa 
+ //inicializaÃ§Ã£o do programa 
 int main (){
     setlocale(LC_ALL, "Portuguese");
-	//variavéis utilizadas
+	//variavÃ©is utilizadas
 	
 char nomeCliente[40], nomeDestino[30], gol,tam, azul;
 int  quantidadePessoas, menu=0, transportadora, idadePessoas, assentosAviao, idCliente[200][2];
@@ -39,15 +36,15 @@ float preco, crianca = 0, valorFinal = 0;
         }
         
         if (strlen(nomeDestino) < 2)
-            printf("Nome inválido, digite novamente o nome do destino:\n");
+            printf("Nome invÃ¡lido, digite novamente o nome do destino:\n");
     }while (strlen(nomeDestino) < 2);
     printf ("qual o valor da passagem para %s:", nomeDestino);
     scanf("%f", &preco);
     printf ("Agora de 1 a 3 digite a transportadora que deseja:\n1-GOL \n2-TAM \n3-AZUL\n");
-    printf ("digite a opção:");
+    printf ("digite a opÃ§Ã£o:");
     scanf ("%d", &transportadora);
     
-	//opção de transportadora usando cases
+	//opÃ§Ã£o de transportadora usando cases
     gol=1;
     tam=2;
     azul=3;
@@ -60,7 +57,7 @@ float preco, crianca = 0, valorFinal = 0;
                 scanf("%d",&assentosAviao);
                 fflush(stdin);
                 if(assentosAviao >=90 && assentosAviao<=200){
-                    printf("a quantidade de assentos está correta!!\n");
+                    printf("a quantidade de assentos estÃ¡ correta!!\n");
                 }else
                     printf("erro, digite novamente!\n");
             }while(!(assentosAviao >=90 && assentosAviao<=200));
@@ -72,7 +69,7 @@ float preco, crianca = 0, valorFinal = 0;
                 scanf("%d",&assentosAviao);
                 fflush(stdin);
                 if(assentosAviao >=90 && assentosAviao<=200){
-                    printf("a quantidade de assentos está correta!!\n");
+                    printf("a quantidade de assentos estÃ¡ correta!!\n");
                 }else
                     printf("erro, digite novamente!\n");
             }while(!(assentosAviao >=90 && assentosAviao<=200));
@@ -84,62 +81,62 @@ float preco, crianca = 0, valorFinal = 0;
                 scanf("%d",&assentosAviao);
                 fflush(stdin);
                 if(assentosAviao >=90 && assentosAviao<=200){
-                    printf("a quantidade de assentos está correta!!\n");
+                    printf("a quantidade de assentos estÃ¡ correta!!\n");
                 }else
                     printf("erro, digite novamente!\n");
             }while(!(assentosAviao >=90 && assentosAviao<=200));
              
             break;
             default:
-                printf("opção invalida, digite novamente:");
+                printf("opÃ§Ã£o invalida, digite novamente:");
     }
     //pausar e limpar a tela para proxima pagina
 	system ("pause");
     system("cls");
- 	// menu para realizar reserva,confirmar reserva, cancelar reserva, status do avião, sair
+ 	// menu para realizar reserva,confirmar reserva, cancelar reserva, status do aviÃ£o, sair
     do{ 
     printf ("=========== BEM-VINDO AO MENU SALUMAR LINHAS AEREAS ==========");
-    printf("\nDigite a opção que deseja(1 a 3):\n1-REALIZAR RESERVA \n2-CONFIRMAR RESERVA\n3-CANCELAR RESERVA\n4-STATUS DO AVIÃO\n5-SAIR\nopção:");
+    printf("\nDigite a opÃ§Ã£o que deseja(1 a 3):\n1-REALIZAR RESERVA \n2-CONFIRMAR RESERVA\n3-CANCELAR RESERVA\n4-STATUS DO AVIÃƒO\n5-SAIR\nopÃ§Ã£o:");
     scanf("%d", &menu);
     system ("pause");
     system("cls");
     switch (menu){
         case 1: 
-            registrador++; //inicialização para saber o id 
+            registrador++; //inicializaÃ§Ã£o para saber o id 
             do{
-                printf("Qual a idade da %d° pessoa:", i+1);
+                printf("Qual a idade da %dÂ° pessoa:", i+1);
                 scanf("%d", &idadePessoas);
                 if (idadePessoas < 1 || idadePessoas > 120){
                     printf ("valor invalido, digite novamente:\n");
                 }else if( idadePessoas<=5 ){
-                    printf("criança\n");
-                    printf("Desconto aplicado, o valor da passagem atualizado é: R$%.2f\n", preco - (preco * 50/100));
+                    printf("crianÃ§a\n");
+                    printf("Desconto aplicado, o valor da passagem atualizado Ã©: R$%.2f\n", preco - (preco * 50/100));
                     crianca++;
                 }else if (idadePessoas <=13 ){
-                    printf("pré-adolescente\n");
-                    printf("o valor da passagem é de R$%.2f\n", preco);
+                    printf("prÃ©-adolescente\n");
+                    printf("o valor da passagem Ã© de R$%.2f\n", preco);
                 }else if (idadePessoas <=17 ){
                     printf("adolescente\n");
-                    printf("o valor da passagem é de R$%.2f\n", preco);
+                    printf("o valor da passagem Ã© de R$%.2f\n", preco);
                 }else if (idadePessoas <= 50){
                     printf("adulto\n");
-                    printf("o valor da passagem é de R$%.2f\n", preco);
+                    printf("o valor da passagem Ã© de R$%.2f\n", preco);
                 }else if (idadePessoas <=120){
                     printf("idoso\n");
-                    printf("o valor da passagem é de R$%.2f\n", preco);
+                    printf("o valor da passagem Ã© de R$%.2f\n", preco);
                 }
             }while (idadePessoas < 1 || idadePessoas > 120);
             
             if(idadePessoas<=5)
-                valorFinal += preco/2; //caso ter criança a baixo de 5 anos tem desconto de %50
+                valorFinal += preco/2; //caso ter crianÃ§a a baixo de 5 anos tem desconto de %50
             else
                 valorFinal += preco;
             
-            printf("o valor final agora é de R$%.2f\n", valorFinal);
-            printf("prossiga para próxima pagina\n");
+            printf("o valor final agora Ã© de R$%.2f\n", valorFinal);
+            printf("prossiga para prÃ³xima pagina\n");
             system ("pause");
             system("cls");
-            //escolha da poltrona para saber se está disponivel/reservados/confirmados
+            //escolha da poltrona para saber se estÃ¡ disponivel/reservados/confirmados
             printf("escolha as poltronas:\n");
             printf(BLUE "C-poltronas confirmados\n" RED "R-poltronas reservados\n" GREEN "D-poltronas disponiveis\n" RESET);
             fflush(stdin);
@@ -176,8 +173,8 @@ float preco, crianca = 0, valorFinal = 0;
             
             idCliente[registrador - 1][1] = SelecionaP - 1; //saida do registrado(id)
             idCliente[registrador - 1][0] = registrador;	// saida para poltrona 
-            printf ("o seu id é %d\n", registrador);
-            printf("\nNão perca esse numero, pois sem ele não é possivel completa sua reserva ou cancelar\n");
+            printf ("o seu id Ã© %d\n", registrador);
+            printf("\nNÃ£o perca esse numero, pois sem ele nÃ£o Ã© possivel completa sua reserva ou cancelar\n");
           
             break;
             //usando o registrador para confirmar a reserva
@@ -192,18 +189,18 @@ float preco, crianca = 0, valorFinal = 0;
                     }
                 }
                 printf("\n------------------------------------------------------------------------------------------------------------------\n");
-                printf ("sua passagem para %s foi reservada com sucesso, para cancelar volte ao menu e escolha a opção CANCELAR RESERVA \n", nomeDestino);
+                printf ("sua passagem para %s foi reservada com sucesso, para cancelar volte ao menu e escolha a opÃ§Ã£o CANCELAR RESERVA \n", nomeDestino);
                 printf("\n------------------------------------------------------------------------------------------------------------------\n");
                 break;
-           //cancelamento da reserva utilizando a mesma função que a confirmação utilizando meio de verificação
+           //cancelamento da reserva utilizando a mesma funÃ§Ã£o que a confirmaÃ§Ã£o utilizando meio de verificaÃ§Ã£o
            case 3:
-           		//while está selecionando a poltrona
+           		//while estÃ¡ selecionando a poltrona
                 do{
                     printf ("para cancelar sua reserva digite seu id:");
                     scanf ("%d", &SelecionaP);
                 }while (SelecionaP < 1 || SelecionaP >assentosAviao); 	  
                 
-                // for está rastreando o idcliente e depois limpando
+                // for estÃ¡ rastreando o idcliente e depois limpando
                 for(x = 0; x < registrador; x++){					
                     if (idCliente[x][0] == SelecionaP){
                         if (poltronas[idCliente[x][1]] != 2) {
@@ -217,8 +214,8 @@ float preco, crianca = 0, valorFinal = 0;
                 break;
     
             case 4:
-            	//status do avião
-                printf("status do avião");			
+            	//status do aviÃ£o
+                printf("status do aviÃ£o");			
                 printf("\n");
                 for (int i = 0; i < assentosAviao; i++){
                     if (i % 5 == 0) {
@@ -245,13 +242,13 @@ float preco, crianca = 0, valorFinal = 0;
             case 5:
             		system("cls");
 					//encerramento do programa 
-                	printf ("saluma agradece a preferência, tenha um ótima dia\n");
+                	printf ("saluma agradece a preferÃªncia, tenha um Ã³tima dia\n");
                 	fflush(stdin);
         			system("pause");
         			exit(1);
 			break;
 			default:
-			printf("opção não encontrada\n");
+			printf("opÃ§Ã£o nÃ£o encontrada\n");
 			break;
     
     }
